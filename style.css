@@ -1,38 +1,34 @@
 /* ======== Variables Globales de Color ======== */
 :root {
-    --primary-color: #0d6efd; /* Cambiado a un color Bootstrap estándar */
-    --bg-light: #ffffff;
-    --text-light: #333333;
-    --bg-dark: #121212;
-    --text-dark: #f0f0f0;
+    --primary-color: #0d6efd; 
+    --bg-light: #ffffff;      /* Modo Claro: Fondo Blanco */
+    --text-light: #333333;    /* Modo Claro: Texto Oscuro */
+    --bg-dark: #121212;       /* Modo Oscuro: Fondo Gris Oscuro */
+    --text-dark: #f0f0f0;     /* Modo Oscuro: Texto Claro */
     --card-dark: #1e1e1e;
     --border-dark: #333333;
-    --footer-bg: #1a1a1a; /* Color oscuro constante para la sección Contacto/Footer */
+    --footer-bg: #1a1a1a;     /* Color oscuro constante para la sección Contacto/Footer */
 }
 
-/* ======== Estilos Base ======== */
+/* ======== Estilos Base (Modo Claro por Defecto) ======== */
 html {
-    /* Offset para el smooth scroll por el navbar fijo */
     scroll-padding-top: 70px;
 }
 
 body {
-    background-color: var(--bg-light);
-    color: var(--text-light);
+    background-color: var(--bg-light);  /* ESTO ES CLAVE: Fondo inicial claro */
+    color: var(--text-light);          /* ESTO ES CLAVE: Texto inicial oscuro */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Ajuste para que las secciones tengan el padding del navbar */
 section {
     padding-top: 70px;
 }
 
-/* Estilo para las tarjetas de proyectos y experiencia */
 .project-card, .experience-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Estilo para los iconos de habilidades */
 .skill-icon {
     filter: grayscale(0.2);
     transition: filter 0.3s ease, transform 0.3s ease;
@@ -45,7 +41,7 @@ section {
 
 /* ======== Modo Oscuro (Dark Mode) ======== */
 body.dark {
-    background-color: var(--bg-dark);
+    background-color: var(--bg-dark); /* Fondo del body en modo oscuro */
     color: var(--text-dark);
 }
 
@@ -86,12 +82,10 @@ body.dark .nav-link:hover {
     color: var(--primary-color) !important;
 }
 
-/* Soluciona el icono de GitHub (que usa .text-dark) */
 body.dark .text-dark {
     color: var(--text-light) !important;
 }
 
-/* Sobrescribe el color de inputs en modo oscuro */
 body.dark .form-control {
     background-color: var(--border-dark);
     color: var(--text-dark);
@@ -113,23 +107,19 @@ body.dark .text-muted {
     color: #b0b0b0 !important;
 }
 
-/* Ajuste para los Badges en el modo oscuro */
 body.dark .badge {
     opacity: 0.8; 
 }
 
 
 /* ======== ESTILOS DE LA SECCIÓN CONTACTO (TIPO FOOTER) ======== */
-
-/* Asegura un color oscuro constante para la sección contact, independientemente del modo (CORRECCIÓN) */
 #contact {
     background-color: var(--footer-bg) !important; 
     color: #ffffff !important;
 }
 
-/* Estilos de los enlaces de navegación */
 .footer-link {
-    color: rgba(255, 255, 255, 0.75); /* Enlaces con tono grisáceo */
+    color: rgba(255, 255, 255, 0.75); 
     text-decoration: none;
     transition: color 0.3s ease;
     display: block; 
@@ -141,18 +131,15 @@ body.dark .badge {
     color: var(--primary-color); 
 }
 
-/* Ajuste para asegurar que el color de texto e iconos sea blanco/claro en el fondo oscuro de #contact (CORRECCIÓN) */
 #contact h5, #contact h6 {
     color: #ffffff !important;
 }
 #contact .social-icon {
-    /* Ajusta el espaciado entre los iconos sociales */
     margin-right: 15px; 
 }
 #contact .text-muted.small {
     color: rgba(255, 255, 255, 0.6) !important;
 }
-/* Asegura que el icono de GitHub sea blanco en esta sección (CORRECCIÓN) */
 #contact .fa-github {
     color: #ffffff !important; 
 }
@@ -171,7 +158,6 @@ body.dark .badge {
     100% { background-position: 0% 50%; }
 }
 
-/* Estilo para el cursor de tipeo */
 #typewriter-text {
     border-right: 2px solid rgba(255, 255, 255, 0.75);
     white-space: nowrap;
@@ -181,13 +167,12 @@ body.dark .badge {
     animation: 
         blink-caret 0.75s step-end infinite;
 }
-/* La animación de 'tipeo' real se maneja por JavaScript */
+
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: rgba(255, 255, 255, 0.75); }
 }
 
-/* Animación de entrada para el nombre (manteniendo la que tenías) */
 #home img, #home h1 {
     animation: fadeInUp 1.5s ease-out;
     animation-fill-mode: backwards;
