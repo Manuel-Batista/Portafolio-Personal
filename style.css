@@ -1,0 +1,220 @@
+/* ======== Variables Globales de Color ======== */
+:root {
+    --primary-color: #0d6efd; /* Cambiado a un color Bootstrap estándar */
+    --bg-light: #ffffff;
+    --text-light: #333333;
+    --bg-dark: #121212;
+    --text-dark: #f0f0f0;
+    --card-dark: #1e1e1e;
+    --border-dark: #333333;
+    --footer-bg: #1a1a1a; /* Color oscuro constante para la sección Contacto/Footer */
+}
+
+/* ======== Estilos Base ======== */
+html {
+    /* Offset para el smooth scroll por el navbar fijo */
+    scroll-padding-top: 70px;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ajuste para que las secciones tengan el padding del navbar */
+section {
+    padding-top: 70px;
+}
+
+/* Estilo para las tarjetas de proyectos y experiencia */
+.project-card, .experience-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo para los iconos de habilidades */
+.skill-icon {
+    filter: grayscale(0.2);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.skill-icon:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+/* ======== Modo Oscuro (Dark Mode) ======== */
+body.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+/* Sobrescrituras específicas para Bootstrap en Dark Mode */
+body.dark .bg-light {
+    background-color: var(--card-dark) !important;
+}
+
+body.dark #projects {
+    background-color: var(--bg-dark); 
+}
+
+body.dark .card {
+    background: var(--card-dark);
+    color: var(--text-dark);
+    border: 1px solid var(--border-dark);
+}
+
+body.dark .modal-content {
+    background: var(--card-dark);
+    color: var(--text-dark);
+}
+body.dark .modal-header .btn-close {
+    filter: invert(1);
+}
+
+body.dark .navbar.bg-light {
+    background-color: var(--card-dark) !important;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+body.dark .navbar-brand,
+body.dark .nav-link {
+    color: var(--text-dark) !important;
+}
+
+body.dark .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Soluciona el icono de GitHub (que usa .text-dark) */
+body.dark .text-dark {
+    color: var(--text-light) !important;
+}
+
+/* Sobrescribe el color de inputs en modo oscuro */
+body.dark .form-control {
+    background-color: var(--border-dark);
+    color: var(--text-dark);
+    border-color: var(--border-dark);
+}
+
+body.dark .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+body.dark .form-control:focus {
+    background-color: var(--border-dark);
+    color: var(--text-dark);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+body.dark .text-muted {
+    color: #b0b0b0 !important;
+}
+
+/* Ajuste para los Badges en el modo oscuro */
+body.dark .badge {
+    opacity: 0.8; 
+}
+
+
+/* ======== ESTILOS DE LA SECCIÓN CONTACTO (TIPO FOOTER) ======== */
+
+/* Asegura un color oscuro constante para la sección contact, independientemente del modo (CORRECCIÓN) */
+#contact {
+    background-color: var(--footer-bg) !important; 
+    color: #ffffff !important;
+}
+
+/* Estilos de los enlaces de navegación */
+.footer-link {
+    color: rgba(255, 255, 255, 0.75); /* Enlaces con tono grisáceo */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block; 
+    padding: 2px 0;
+    font-size: 0.95rem;
+}
+
+.footer-link:hover {
+    color: var(--primary-color); 
+}
+
+/* Ajuste para asegurar que el color de texto e iconos sea blanco/claro en el fondo oscuro de #contact (CORRECCIÓN) */
+#contact h5, #contact h6 {
+    color: #ffffff !important;
+}
+#contact .social-icon {
+    /* Ajusta el espaciado entre los iconos sociales */
+    margin-right: 15px; 
+}
+#contact .text-muted.small {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+/* Asegura que el icono de GitHub sea blanco en esta sección (CORRECCIÓN) */
+#contact .fa-github {
+    color: #ffffff !important; 
+}
+
+
+/* ======== Homepage (Hero) ======== */
+#home {
+    background: linear-gradient(-45deg, #0c3500, #01160a, #035d3c, #135900);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Estilo para el cursor de tipeo */
+#typewriter-text {
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+    display: inline-block;
+    animation: 
+        blink-caret 0.75s step-end infinite;
+}
+/* La animación de 'tipeo' real se maneja por JavaScript */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgba(255, 255, 255, 0.75); }
+}
+
+/* Animación de entrada para el nombre (manteniendo la que tenías) */
+#home img, #home h1 {
+    animation: fadeInUp 1.5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+#home h1 { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ======== Animaciones al Hacer Scroll (Scroll Reveal) ======== */
+.reveal {
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
