@@ -1,47 +1,8 @@
-const body = document.body;
-const darkModeToggle = document.getElementById('darkModeToggle');
-const toggleIcon = darkModeToggle ? darkModeToggle.querySelector('i') : null; // Verificación
-
-// ===================================
-// === Lógica del Dark Mode (Aplicación Inmediata) ===
-// ===================================
-
-const applyTheme = (theme) => {
-    if (!body || !toggleIcon) return; // Salir si los elementos no existen
-
-    if (theme === 'dark') {
-        body.classList.add('dark');
-        toggleIcon.classList.replace('fa-moon', 'fa-sun');
-        localStorage.setItem('theme', 'dark');
-    } else {
-        body.classList.remove('dark');
-        toggleIcon.classList.replace('fa-sun', 'fa-moon');
-        localStorage.setItem('theme', 'light');
-    }
-};
-
-// 💡 APLICAR EL TEMA INMEDIATAMENTE ANTES DE QUE CARGUE EL RESTO DEL DOM
-const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-const userSavedTheme = localStorage.getItem('theme');
-
-if (userSavedTheme) {
-    applyTheme(userSavedTheme);
-} else {
-    // Si no hay preferencia guardada, usa la del sistema
-    applyTheme(systemPrefersDark.matches ? 'dark' : 'light');
-}
-
-// Escucha el cambio de preferencia del sistema
-systemPrefersDark.addEventListener('change', (e) => {
-    // Solo cambia si el usuario no ha guardado una preferencia manual
-    if (!localStorage.getItem('theme')) {
-        applyTheme(e.matches ? 'dark' : 'light');
-    }
-});
-
-
 document.addEventListener('DOMContentLoaded', () => {
 
+    const body = document.body;
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const toggleIcon = darkModeToggle.querySelector('i');
     const navbar = document.querySelector('.navbar');
     const navbarCollapse = document.querySelector('.navbar-collapse');
     const navbarToggler = document.querySelector('.navbar-toggler');
@@ -62,8 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let typingSpeed = 100;
 
     function typeWriter() {
-        if (!typewriterText) return; // Detener si el elemento no existe
-        
         const currentPhrase = phrases[phraseIndex];
         
         if (isDeleting) {
@@ -88,10 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(typeWriter, typingSpeed);
     }
     
-    if (typewriterText) {
-        setTimeout(typeWriter, 2000); 
-    }
-    
+    setTimeout(typeWriter, 2000); 
 
     // ===================================
     // === Lógica de Smooth Scroll ===
@@ -125,16 +81,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ===================================
-    // === Lógica del Dark Mode (Listener) ===
+    // === Lógica del Dark Mode ===
     // ===================================
-    // El listener de click se ejecuta aquí
-    if (darkModeToggle) {
-        darkModeToggle.addEventListener('click', () => {
-            const currentTheme = body.classList.contains('dark') ? 'light' : 'dark';
-            applyTheme(currentTheme);
-        });
+    const applyTheme = (theme) => {
+        if (theme === 'dark') {
+            body.classList.add('dark');
+            toggleIcon.classList.replace('fa-moon', 'fa-sun');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            body.classList.remove('dark');
+            toggleIcon.classList.replace('fa-sun', 'fa-moon');
+            localStorage.setItem('theme', 'light');
+        }
+    };
+
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const userSavedTheme = localStorage.getItem('theme');
+
+    if (userSavedTheme) {
+        applyTheme(userSavedTheme);
+    } else {
+        applyTheme(systemPrefersDark.matches ? 'dark' : 'light');
     }
 
+    darkModeToggle.addEventListener('click', () => {
+        const currentTheme = body.classList.contains('dark') ? 'light' : 'dark';
+        applyTheme(currentTheme);
+    });
+    
+    systemPrefersDark.addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+            applyTheme(e.matches ? 'dark' : 'light');
+        }
+    });
+
+    // === NOTA: Se ha eliminado la lógica del formulario de contacto ===
+    
     // =======================================
     // === Lógica del Scroll Reveal (IntersectionObserver) ===
     // =======================================
@@ -156,8 +138,5 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(element => {
         observer.observe(element);
     });
-
-});
-
 
 });
