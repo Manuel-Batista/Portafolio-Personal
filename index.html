@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Perfil profesional de Manuel Batista, Ing. en Sistemas Computacionales enfocado en desarrollo web frontend, JavaScript, Bootstrap y proyectos digitales.">
+    <meta name="keywords" content="ingeniero en sistemas, frontend, HTML, CSS, JavaScript, Bootstrap, portafolio, Manuel Batista">
+    <meta name="author" content="Manuel Batista">
+
+    <title>Manuel E. Batista Ogando | Ing. en Sistemas Computacionales</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top site-navbar" aria-label="Navegacion principal">
+        <div class="container">
+            <a class="navbar-brand fw-semibold" href="#home">Manuel E. Batista Ogando</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu de navegaci&oacute;n">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#about">Perfil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#journey">Formaci&oacute;n</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                </ul>
+
+                <button id="darkModeToggle" class="theme-toggle ms-lg-3" type="button" aria-label="Cambiar tema">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="row align-items-start g-5">
+                    <div class="col-lg-4">
+                        <div class="profile-card reveal" aria-label="Resumen profesional de Manuel E. Batista Ogando">
+                            <img src="assets/profile.jpeg" alt="Foto de perfil de Manuel E. Batista Ogando" class="profile-avatar" width="128" height="128">
+                            <div>
+                                <h2>Manuel E. Batista Ogando</h2>
+                                <p>Ing. en Sistemas Computacionales enfocado en desarrollo web frontend.</p>
+                            </div>
+                            <div class="profile-meta">
+                                <a class="profile-social" href="https://github.com/Manuel-Batista" target="_blank" rel="noopener noreferrer" aria-label="Ver perfil de GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                                <a class="profile-social" href="https://www.linkedin.com/in/ing-manuel-e-batista-ogando-0116542a1" target="_blank" rel="noopener noreferrer" aria-label="Ver perfil de LinkedIn">
+                                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="profile-actions">
+                                <a class="btn btn-primary" href="#projects">Ver proyectos</a>
+                                <a class="btn btn-outline-dark" href="assets/cv.pdf" download>Descargar CV</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <p class="section-kicker reveal">Perfil profesional</p>
+                        <h1 class="hero-title reveal">Ingenier&iacute;a de Sistemas y desarrollo frontend.</h1>
+                        <p id="typewriter-text" class="hero-subtitle reveal" aria-live="polite"></p>
+
+                        <div class="hero-summary reveal">
+                            <div>
+                                <span>Area</span>
+                                <strong>Desarrollo web</strong>
+                            </div>
+                            <div>
+                                <span>Stack base</span>
+                                <strong class="tech-icons" aria-label="HTML, CSS, JavaScript y Bootstrap">
+                                    <i class="fab fa-html5 html-icon" title="HTML5" aria-hidden="true"></i>
+                                    <i class="fab fa-css3-alt css-icon" title="CSS3" aria-hidden="true"></i>
+                                    <i class="fab fa-js-square js-icon" title="JavaScript" aria-hidden="true"></i>
+                                    <i class="fab fa-bootstrap bootstrap-icon" title="Bootstrap" aria-hidden="true"></i>
+                                </strong>
+                            </div>
+                            <div>
+                                <span>En progreso</span>
+                                <strong class="tech-icons tech-icons-with-text">
+                                    <i class="fab fa-react react-icon" title="React" aria-hidden="true"></i>
+                                    <span>Proyectos frontend modernos</span>
+                                </strong>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <div class="row justify-content-between align-items-start g-5">
+                    <div class="col-lg-5">
+                        <p class="section-kicker reveal">Perfil</p>
+                        <h2 class="section-title reveal">Base t&eacute;cnica, visi&oacute;n de sistemas y enfoque en interfaces web.</h2>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <p class="lead reveal">
+                            Hola, soy Manuel E. Batista Ogando, Ingeniero de Sistemas Computacionales orientado al desarrollo frontend. Intereses en crear web claras, ordenadas y f&aacute;ciles de utilizar.
+                        </p>
+                        <p class="text-muted reveal">
+                            Trabajo con fundamentos de maquetaci&oacute;n, responsive design, JavaScript y Bootstrap. Mi objetivo es seguir fortaleciendo mi criterio t&eacute;cnico, pasar de interfaces est&aacute;ticas a aplicaciones m&aacute;s completas y documentar proyectos reales.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row g-4 mt-4">
+                    <div class="col-md-4 reveal">
+                        <div class="value-item">
+                            <i class="fas fa-layer-group" aria-hidden="true"></i>
+                            <h3>Desarrollo frontend</h3>
+                            <p>Construcci&oacute;n de interfaces con estructura sem&aacute;ntica, estilos responsivos e interacciones con JavaScript.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 reveal">
+                        <div class="value-item">
+                            <i class="fas fa-diagram-project" aria-hidden="true"></i>
+                            <h3>Pensamiento de sistemas</h3>
+                            <p>Organizaci&oacute;n de procesos, componentes y flujos para entender c&oacute;mo encaja cada parte del proyecto.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 reveal">
+                        <div class="value-item">
+                            <i class="fas fa-code-branch" aria-hidden="true"></i>
+                            <h3>Mejora continua</h3>
+                            <p>Pr&aacute;ctica constante, documentaci&oacute;n y feedback para entregar soluciones cada vez m&aacute;s limpias.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-kicker reveal">Proyectos</p>
+                    <h2 class="section-title reveal">Proyectos que muestran mi trabajo frontend</h2>
+                </div>
+
+                <div class="project-filters reveal" aria-label="Filtrar proyectos por categoria">
+                    <button class="project-filter active" type="button" data-filter="all">Todos</button>
+                    <button class="project-filter" type="button" data-filter="software">Desarrollo de software</button>
+                    <button class="project-filter" type="button" data-filter="mobile">Aplicaciones m&oacute;viles</button>
+                    <button class="project-filter" type="button" data-filter="web">P&aacute;ginas web</button>
+                </div>
+
+                <div class="project-list">
+                    <div class="project-item reveal" data-category="web">
+                        <article class="project-card">
+                            <button class="project-thumbnail preview-portfolio" type="button" data-bs-toggle="modal" data-bs-target="#projectModal1" aria-label="Ver detalles de Portafolio profesional">
+                                <span class="project-window-bar" aria-hidden="true"></span>
+                                <span class="project-preview-title">MB</span>
+                                <span class="project-preview-lines" aria-hidden="true"></span>
+                            </button>
+                            <div class="project-body">
+                                <div class="project-info">
+                                    <p class="project-type">Sitio web personal</p>
+                                    <h3>Portafolio profesional</h3>
+                                </div>
+                                <div class="project-tags tech-tags" aria-label="Tecnologias usadas: HTML, CSS y JavaScript">
+                                    <span title="HTML5"><i class="fab fa-html5 html-icon" aria-hidden="true"></i></span>
+                                    <span title="CSS3"><i class="fab fa-css3-alt css-icon" aria-hidden="true"></i></span>
+                                    <span title="JavaScript"><i class="fab fa-js-square js-icon" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="project-item reveal" data-category="software">
+                        <article class="project-card">
+                            <button class="project-thumbnail preview-dashboard" type="button" data-bs-toggle="modal" data-bs-target="#projectModal2" aria-label="Ver detalles de Dashboard administrativo">
+                                <span class="dashboard-chart" aria-hidden="true"></span>
+                                <span class="dashboard-grid" aria-hidden="true"></span>
+                            </button>
+                            <div class="project-body">
+                                <div class="project-info">
+                                    <p class="project-type">Desarrollo de software</p>
+                                    <h3>Dashboard administrativo</h3>
+                                </div>
+                                <div class="project-tags tech-tags" aria-label="Tecnologias usadas: Bootstrap, CSS Grid e interfaz de usuario">
+                                    <span title="Bootstrap"><i class="fab fa-bootstrap bootstrap-icon" aria-hidden="true"></i></span>
+                                    <span title="CSS Grid"><i class="fas fa-border-all css-icon" aria-hidden="true"></i></span>
+                                    <span title="UI"><i class="fas fa-window-maximize ui-icon" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="project-item reveal" data-category="web">
+                        <article class="project-card">
+                            <button class="project-thumbnail preview-landing" type="button" data-bs-toggle="modal" data-bs-target="#projectModal3" aria-label="Ver detalles de Landing page de producto">
+                                <span class="landing-hero" aria-hidden="true"></span>
+                                <span class="landing-content" aria-hidden="true"></span>
+                            </button>
+                            <div class="project-body">
+                                <div class="project-info">
+                                    <p class="project-type">P&aacute;gina web</p>
+                                    <h3>Landing page de producto</h3>
+                                </div>
+                                <div class="project-tags tech-tags" aria-label="Tecnologias usadas: HTML, CSS y responsive design">
+                                    <span title="HTML5"><i class="fab fa-html5 html-icon" aria-hidden="true"></i></span>
+                                    <span title="CSS3"><i class="fab fa-css3-alt css-icon" aria-hidden="true"></i></span>
+                                    <span title="Responsive design"><i class="fas fa-mobile-screen-button responsive-icon" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="project-item reveal" data-category="mobile">
+                        <article class="project-card">
+                            <button class="project-thumbnail preview-mobile" type="button" data-bs-toggle="modal" data-bs-target="#projectModal4" aria-label="Ver detalles de App movil de tareas">
+                                <span class="phone-frame" aria-hidden="true"></span>
+                                <span class="phone-list" aria-hidden="true"></span>
+                            </button>
+                            <div class="project-body">
+                                <div class="project-info">
+                                    <p class="project-type">Aplicaci&oacute;n m&oacute;vil</p>
+                                    <h3>App m&oacute;vil de tareas</h3>
+                                </div>
+                                <div class="project-tags tech-tags" aria-label="Tecnologias usadas: React, JavaScript y mobile first">
+                                    <span title="React"><i class="fab fa-react react-icon" aria-hidden="true"></i></span>
+                                    <span title="JavaScript"><i class="fab fa-js-square js-icon" aria-hidden="true"></i></span>
+                                    <span title="Mobile first"><i class="fas fa-mobile-screen responsive-icon" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="project-item reveal" data-category="software">
+                        <article class="project-card">
+                            <button class="project-thumbnail preview-system" type="button" data-bs-toggle="modal" data-bs-target="#projectModal5" aria-label="Ver detalles de Sistema de gestion academica">
+                                <span class="system-sidebar" aria-hidden="true"></span>
+                                <span class="system-table" aria-hidden="true"></span>
+                            </button>
+                            <div class="project-body">
+                                <div class="project-info">
+                                    <p class="project-type">Desarrollo de software</p>
+                                    <h3>Sistema de gesti&oacute;n acad&eacute;mica</h3>
+                                </div>
+                                <div class="project-tags tech-tags" aria-label="Tecnologias usadas: HTML, CSS, JavaScript y Bootstrap">
+                                    <span title="HTML5"><i class="fab fa-html5 html-icon" aria-hidden="true"></i></span>
+                                    <span title="CSS3"><i class="fab fa-css3-alt css-icon" aria-hidden="true"></i></span>
+                                    <span title="JavaScript"><i class="fab fa-js-square js-icon" aria-hidden="true"></i></span>
+                                    <span title="Bootstrap"><i class="fab fa-bootstrap bootstrap-icon" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="journey" class="section section-soft">
+            <div class="container">
+                <div class="row justify-content-between g-5">
+                    <div class="col-lg-5">
+                        <p class="section-kicker reveal">Formaci&oacute;n</p>
+                        <h2 class="section-title reveal">Mi ruta actual de crecimiento</h2>
+                        <div class="growth-panel reveal" aria-label="Porcentaje de dominio por area">
+                            <div class="growth-item" style="--level: 78%;">
+                                <div class="growth-meta">
+                                    <span>Ingenier&iacute;a de Sistemas</span>
+                                    <strong>78%</strong>
+                                </div>
+                                <div class="growth-track" aria-hidden="true">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="growth-item" style="--level: 72%;">
+                                <div class="growth-meta">
+                                    <span>Frontend base</span>
+                                    <strong>72%</strong>
+                                </div>
+                                <div class="growth-track" aria-hidden="true">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="growth-item" style="--level: 38%;">
+                                <div class="growth-meta">
+                                    <span>React y APIs</span>
+                                    <strong>38%</strong>
+                                </div>
+                                <div class="growth-track" aria-hidden="true">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="timeline reveal">
+                            <div class="timeline-item">
+                                <span>Actualidad</span>
+                                <h3>Ingenier&iacute;a de Sistemas Computacionales</h3>
+                                <p>Formaci&oacute;n acad&eacute;mica enfocada en fundamentos de programaci&oacute;n, tecnolog&iacute;a y resoluci&oacute;n de problemas.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span>Frontend</span>
+                                <h3>HTML, CSS, JavaScript y Bootstrap</h3>
+                                <p>Pr&aacute;ctica constante de maquetaci&oacute;n, componentes, navegaci&oacute;n, interacciones y sitios responsivos.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span>Siguiente paso</span>
+                                <h3>React y proyectos reales</h3>
+                                <p>Profundizar en componentes, estado, consumo de APIs y despliegue de aplicaciones frontend modernas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="footer-panel reveal">
+                    <div>
+                        <p class="section-kicker reveal">Contacto</p>
+                        <h2 class="footer-title">Manuel E. Batista Ogando</h2>
+                        <p class="contact-copy">Ing. en Sistemas Computacionales enfocado en desarrollo web frontend.</p>
+                        <ul class="footer-lines">
+                            <li>Desarrollo interfaces web responsivas con HTML, CSS, JavaScript y Bootstrap.</li>
+                            <li>Combino pensamiento de sistemas con enfoque pr&aacute;ctico en frontend.</li>
+                            <li>Actualmente fortalezco React, componentes y consumo de APIs.</li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-card">
+                        <a class="contact-item" href="mailto:manuelevanbatogando@gmail.com">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            manuelevanbatogando@gmail.com
+                        </a>
+                        <a class="contact-item" href="https://github.com/Manuel-Batista" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                            GitHub
+                        </a>
+                        <a class="contact-item" href="https://www.linkedin.com/in/ing-manuel-e-batista-ogando-0116542a1" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Manuel E. Batista Ogando.</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="projectModal1" tabindex="-1" aria-labelledby="projectModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title fs-5" id="projectModal1Label">Portafolio profesional</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Proyecto enfocado en presentar un perfil profesional de forma simple: estructura sem&aacute;ntica, secciones claras, modo oscuro, navegaci&oacute;n suave y animaciones discretas.</p>
+                    <p class="mb-2 fw-semibold">Objetivo:</p>
+                    <p>Comunicar habilidades, formaci&oacute;n y proyectos sin exagerar experiencia ni depender de elementos visuales innecesarios.</p>
+                    <div class="project-tags tech-tags mt-3" aria-label="Tecnologias usadas: HTML, CSS, JavaScript y Bootstrap">
+                        <span title="HTML5"><i class="fab fa-html5 html-icon" aria-hidden="true"></i></span>
+                        <span title="CSS3"><i class="fab fa-css3-alt css-icon" aria-hidden="true"></i></span>
+                        <span title="JavaScript"><i class="fab fa-js-square js-icon" aria-hidden="true"></i></span>
+                        <span title="Bootstrap"><i class="fab fa-bootstrap bootstrap-icon" aria-hidden="true"></i></span>
+                    </div>
+                    <div class="modal-actions">
+                        <a class="btn btn-primary" href="index.html" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="projectModal2" tabindex="-1" aria-labelledby="projectModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title fs-5" id="projectModal2Label">Dashboard administrativo</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Concepto de interfaz para practicar organizaci&oacute;n de informaci&oacute;n: m&eacute;tricas, tarjetas, estados y jerarqu&iacute;a visual.</p>
+                    <p class="mb-2 fw-semibold">Objetivo:</p>
+                    <p>Desarrollar criterio para construir pantallas de trabajo que sean escaneables, consistentes y adaptables.</p>
+                    <div class="project-tags tech-tags mt-3" aria-label="Tecnologias usadas: Bootstrap, CSS Grid, responsive design e interfaz de usuario">
+                        <span title="Bootstrap"><i class="fab fa-bootstrap bootstrap-icon" aria-hidden="true"></i></span>
+                        <span title="CSS Grid"><i class="fas fa-border-all css-icon" aria-hidden="true"></i></span>
+                        <span title="Responsive design"><i class="fas fa-mobile-screen-button responsive-icon" aria-hidden="true"></i></span>
+                        <span title="UI"><i class="fas fa-window-maximize ui-icon" aria-hidden="true"></i></span>
+                    </div>
+                    <div class="modal-actions">
+                        <a class="btn btn-primary" href="index.html" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="projectModal3" tabindex="-1" aria-labelledby="projectModal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title fs-5" id="projectModal3Label">Landing page de producto</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Ejercicio de maquetaci&oacute;n para una p&aacute;gina comercial con presentaci&oacute;n de producto, beneficios, llamadas a la acci&oacute;n y adaptaci&oacute;n m&oacute;vil.</p>
+                    <p class="mb-2 fw-semibold">Objetivo:</p>
+                    <p>Practicar estructura, espaciado, legibilidad y consistencia visual en una p&aacute;gina enfocada en conversi&oacute;n.</p>
+                    <div class="project-tags tech-tags mt-3" aria-label="Tecnologias usadas: HTML, CSS, mobile first y UX">
+                        <span title="HTML5"><i class="fab fa-html5 html-icon" aria-hidden="true"></i></span>
+                        <span title="CSS3"><i class="fab fa-css3-alt css-icon" aria-hidden="true"></i></span>
+                        <span title="Mobile first"><i class="fas fa-mobile-screen responsive-icon" aria-hidden="true"></i></span>
+                        <span title="UX"><i class="fas fa-users-gear ux-icon" aria-hidden="true"></i></span>
+                    </div>
+                    <div class="modal-actions">
+                        <a class="btn btn-primary" href="index.html" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="projectModal4" tabindex="-1" aria-labelledby="projectModal4Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title fs-5" id="projectModal4Label">App m&oacute;vil de tareas</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Proyecto ficticio temporal para representar una aplicaci&oacute;n m&oacute;vil de productividad con vista de tareas, estados y navegaci&oacute;n simple.</p>
+                    <p class="mb-2 fw-semibold">Objetivo:</p>
+                    <p>Practicar estructura de interfaz m&oacute;vil, componentes reutilizables y organizaci&oacute;n de estados b&aacute;sicos.</p>
+                    <div class="project-tags tech-tags mt-3" aria-label="Tecnologias usadas: React, JavaScript y mobile first">
+                        <span title="React"><i class="fab fa-react react-icon" aria-hidden="true"></i></span>
+                        <span title="JavaScript"><i class="fab fa-js-square js-icon" aria-hidden="true"></i></span>
+                        <span title="Mobile first"><i class="fas fa-mobile-screen responsive-icon" aria-hidden="true"></i></span>
+                    </div>
+                    <div class="modal-actions">
+                        <a class="btn btn-primary" href="index.html" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="projectModal5" tabindex="-1" aria-labelledby="projectModal5Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title fs-5" id="projectModal5Label">Sistema de gesti&oacute;n acad&eacute;mica</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Proyecto ficticio temporal para representar un sistema de gesti&oacute;n con panel, registros, b&uacute;squeda y organizaci&oacute;n de informaci&oacute;n.</p>
+                    <p class="mb-2 fw-semibold">Objetivo:</p>
+                    <p>Practicar flujos de software, organizaci&oacute;n de datos en pantalla y componentes de administraci&oacute;n.</p>
+                    <div class="project-tags tech-tags mt-3" aria-label="Tecnologias usadas: HTML, CSS, JavaScript y Bootstrap">
+                        <span title="HTML5"><i class="fab fa-html5 html-icon" aria-hidden="true"></i></span>
+                        <span title="CSS3"><i class="fab fa-css3-alt css-icon" aria-hidden="true"></i></span>
+                        <span title="JavaScript"><i class="fab fa-js-square js-icon" aria-hidden="true"></i></span>
+                        <span title="Bootstrap"><i class="fab fa-bootstrap bootstrap-icon" aria-hidden="true"></i></span>
+                    </div>
+                    <div class="modal-actions">
+                        <a class="btn btn-primary" href="index.html" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
