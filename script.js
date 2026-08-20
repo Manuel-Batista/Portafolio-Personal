@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const phrases = [
         'Desarrollo interfaces web responsivas con HTML, CSS, JavaScript y Bootstrap.',
-        'Combino pensamiento de sistemas con enfoque practico en frontend.',
-        'Actualmente fortalezco React, componentes y consumo de APIs.'
+        'Aplico una visi\u00f3n de sistemas para crear experiencias web claras y funcionales.',
+        'Actualmente profundizo en React, componentes reutilizables y consumo de APIs.'
     ];
 
     let phraseIndex = 0;
